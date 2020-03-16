@@ -11,3 +11,6 @@ I made this so that I could have custom sounds played when I mute/unmute my micr
 * Supports .wav, .mp3, .aiff, .ogg, and .flac files
 * Configure as many key combinations as you want
 * The program can be minimised to the system tray to run in the background
+
+## Screenshot
+![Screenshot of program](https://raw.githubusercontent.com/piggeywig2000/KeybindAudio/master/screenshots/screenshot1.png)
