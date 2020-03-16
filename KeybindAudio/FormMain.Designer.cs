@@ -479,6 +479,7 @@
             this.listBoxKeybindSounds.Size = new System.Drawing.Size(192, 199);
             this.listBoxKeybindSounds.TabIndex = 0;
             this.listBoxKeybindSounds.Click += new System.EventHandler(this.listBoxKeybindSounds_Click);
+            this.listBoxKeybindSounds.SelectedIndexChanged += new System.EventHandler(this.listBoxKeybindSounds_SelectedIndexChanged);
             // 
             // openFileDialogSound
             // 

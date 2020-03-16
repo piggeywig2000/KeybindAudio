@@ -131,6 +131,7 @@ namespace KeybindAudio
             {
                 listBoxKeybindSounds.Items.Add(bind.Name);
             }
+            if (config.KeybindSounds.IndexOf(selectedKeybind) > -1) ignoreListboxIndexChange = true;
             listBoxKeybindSounds.SelectedIndex = config.KeybindSounds.IndexOf(selectedKeybind);
 
             //Enable or disable elements depending on if there is a selected element
@@ -225,6 +226,25 @@ namespace KeybindAudio
         /// </summary>
         private void listBoxKeybindSounds_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        /// <summary>
+        /// Whether to ignore a change in the selected index of the listbox. Used to change the index without triggering the event
+        /// </summary>
+        bool ignoreListboxIndexChange = false;
+
+        /// <summary>
+        /// When the selected index is changed in the listbox, update the currently selected item and update the listbox. Overwrite the config file
+        /// </summary>
+        private void listBoxKeybindSounds_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ignoreListboxIndexChange)
+            {
+                ignoreListboxIndexChange = false;
+                return;
+            }
+
             //Set all keybinds to not selected
             foreach (KeybindSound bind in config.KeybindSounds) bind.IsSelected = false;
 
@@ -241,7 +261,8 @@ namespace KeybindAudio
                 ConfigParser.SaveFile(Useful.pathToConfig, config);
             }
         }
-        
+
+
 
 
         /// <summary>
