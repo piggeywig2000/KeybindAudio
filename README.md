@@ -1,5 +1,7 @@
 # KeybindAudio
-Plays audio when certain keybinds are pressed
+Plays audio when certain keybinds are pressed.
+
+Go to the [releases](https://github.com/piggeywig2000/KeybindAudio/releases) page to download it
 
 ## Features
 I made this so that I could have custom sounds played when I mute/unmute my microphone or activate/deactivate my voice changer
